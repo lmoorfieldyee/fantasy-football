@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+import requests
+import matplotlib.pyplot as plt
+from bs4 import BeautifulSoup
+
+URL = "https://www.pro-football-reference.com/years/2020/passing.htm"
+all_tables = pd.read_html(URL)
+
+qb_df = all_tables[0]
+
+print(unique(qb_df['Rk']))
